@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import { useToast } from "@/hooks/use-toast";
+import { personalInfo, emailjsConfig } from '@/config/personalInfo';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -29,16 +30,18 @@ const Contact = () => {
       from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
-      to_email: '22amtics005@gmail.com',
-      to_phone: '+91 8238425832'
+      to_email: personalInfo.email,
+      to_phone: personalInfo.phone
     };
 
     try {
+      // Initialize EmailJS with your public key
+      emailjs.init(emailjsConfig.publicKey);
+      
       await emailjs.send(
-        'service_placeholder', // You'll need to replace this with your actual Service ID
-        'template_placeholder', // You'll need to replace this with your actual Template ID
-        templateParams,
-        'user_placeholder' // You'll need to replace this with your actual User ID
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams
       );
       
       toast({
@@ -83,8 +86,8 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <a href="mailto:22amtics005@gmail.com" className="text-foreground hover:text-primary transition-colors">
-                  22amtics005@gmail.com
+                <a href={`mailto:${personalInfo.email}`} className="text-foreground hover:text-primary transition-colors">
+                  {personalInfo.email}
                 </a>
               </div>
             </div>
@@ -95,8 +98,8 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Phone</p>
-                <a href="tel:+918238425832" className="text-foreground hover:text-primary transition-colors">
-                  +91 8238425832
+                <a href={`tel:${personalInfo.phone}`} className="text-foreground hover:text-primary transition-colors">
+                  {personalInfo.phone}
                 </a>
               </div>
             </div>
@@ -108,7 +111,7 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
                 <p className="text-foreground">
-                  City, Country
+                  {personalInfo.location}
                 </p>
               </div>
             </div>

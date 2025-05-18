@@ -10,13 +10,14 @@ import Hobbies from '@/components/Hobbies';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { Toaster } from "@/components/ui/toaster";
+import { personalInfo } from '@/config/personalInfo';
 
 const Index = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
   
   // Update the document title
   useEffect(() => {
-    document.title = 'Your Name - Personal Portfolio';
+    document.title = `${personalInfo.name} - Personal Portfolio`;
   }, []);
   
   // Show back to top button when scrolled down
