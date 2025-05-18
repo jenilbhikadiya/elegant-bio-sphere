@@ -54,6 +54,14 @@ export const personalInfo: PersonalInfoType = {
   ]
 };
 
+// Create a socialLinks object for easy access to social media URLs
+export const socialLinks = {
+  facebook: personalInfo.socialMedia.find(item => item.name === "Facebook")?.url || "#",
+  twitter: personalInfo.socialMedia.find(item => item.name === "Twitter")?.url || "#",
+  linkedin: personalInfo.socialMedia.find(item => item.name === "LinkedIn")?.url || "#",
+  instagram: personalInfo.socialMedia.find(item => item.name === "Instagram")?.url || "#",
+};
+
 // EmailJS configuration - Replace with your own credentials
 export const emailjsConfig = {
   serviceId: "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
