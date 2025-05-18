@@ -41,23 +41,35 @@ const skillCategories = [
 const Skills = () => {
   return (
     <section id="skills" className="section-container bg-gray-50">
-      <h2 className="section-title">Skills</h2>
+      <h2 className="section-title animate-fade-in">Skills</h2>
       
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skillCategories.map(category => (
-          <div key={category.id} className="card p-6">
+        {skillCategories.map((category, categoryIndex) => (
+          <div 
+            key={category.id} 
+            className="card p-6 animate-fade-in hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+            style={{ animationDelay: `${categoryIndex * 200}ms` }}
+          >
             <h3 className="text-xl font-bold mb-4">{category.title}</h3>
             <div className="space-y-4">
-              {category.skills.map(skill => (
-                <div key={skill.name}>
+              {category.skills.map((skill, skillIndex) => (
+                <div 
+                  key={skill.name}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${(categoryIndex * 200) + (skillIndex * 100)}ms` }}
+                >
                   <div className="flex justify-between mb-1">
                     <span className="font-medium">{skill.name}</span>
                     <span className="text-muted-foreground text-sm">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                     <div 
-                      className="bg-primary h-2 rounded-full" 
-                      style={{ width: `${skill.level}%` }}
+                      className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out" 
+                      style={{ 
+                        width: `${skill.level}%`, 
+                        animationDelay: `${(categoryIndex * 200) + (skillIndex * 150)}ms`,
+                        animation: 'slideRight 1.5s ease-out forwards',
+                      }}
                     ></div>
                   </div>
                 </div>

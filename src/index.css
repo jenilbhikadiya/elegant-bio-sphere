@@ -56,6 +56,17 @@
   .section-title::after {
     content: '';
     @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full;
+    animation: growWidth 1s ease-out forwards;
+  }
+
+  @keyframes growWidth {
+    from { width: 0; }
+    to { width: 50%; }
+  }
+  
+  @keyframes slideRight {
+    from { width: 0; }
+    to { width: 100%; }
   }
 
   .section-container {
@@ -64,5 +75,29 @@
 
   .card {
     @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  /* Additional animation classes */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-rotate {
+    @apply transition-transform duration-300 hover:rotate-3;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+  
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

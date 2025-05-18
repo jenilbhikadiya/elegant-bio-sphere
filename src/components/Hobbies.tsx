@@ -1,4 +1,6 @@
 
+import { useInView } from 'react-intersection-observer';
+
 // Sample hobbies data - replace with your own
 const hobbies = [
   {
@@ -43,16 +45,28 @@ const hobbies = [
 const Hobbies = () => {
   return (
     <section id="hobbies" className="section-container">
-      <h2 className="section-title">Hobbies & Interests</h2>
+      <h2 className="section-title animate-fade-in">Hobbies & Interests</h2>
       
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {hobbies.map(hobby => (
-          <div key={hobby.id} className="card p-6 hover:shadow-lg transition-shadow">
-            <div className="text-4xl mb-4">{hobby.icon}</div>
-            <h3 className="text-xl font-bold mb-2">{hobby.title}</h3>
-            <p className="text-muted-foreground">{hobby.description}</p>
-          </div>
-        ))}
+        {hobbies.map((hobby, index) => {
+          const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.1,
+          });
+
+          return (
+            <div 
+              ref={ref}
+              key={hobby.id} 
+              className={`card p-6 ${inView ? 'animate-fade-in' : 'opacity-0'} hover:shadow-lg hover:-translate-y-2 hover:rotate-1 transition-all duration-300`}
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div className="text-4xl mb-4 transform transition-transform duration-300 hover:scale-125 hover:rotate-12">{hobby.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{hobby.title}</h3>
+              <p className="text-muted-foreground">{hobby.description}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
