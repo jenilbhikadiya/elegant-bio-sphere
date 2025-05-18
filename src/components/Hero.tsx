@@ -1,5 +1,7 @@
 
 import { ArrowDown } from 'lucide-react';
+import bioImg from './bio_img.jpeg';
+
 
 const Hero = () => {
   return (
@@ -37,10 +39,11 @@ const Hero = () => {
           <div className="animate-fade-in [animation-delay:800ms] relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
             {/* Replace with your actual profile image */}
             <img 
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=600&h=600&q=80" 
-              alt="Your Name" 
-              className="w-full h-full object-cover"
-            />
+  src={bioImg} 
+  alt="Jenil Bhikadiya" 
+  className="w-full h-full object-cover"
+/>
+
           </div>
         </div>
       </div>
