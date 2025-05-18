@@ -1,9 +1,11 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { useToast } from "@/hooks/use-toast";
 import { personalInfo, emailjsConfig } from '@/config/personalInfo';
+
+// ✅ Initialize EmailJS ONCE globally (outside component)
+emailjs.init(emailjsConfig.publicKey);
 
 const Contact = () => {
   const { toast } = useToast();
@@ -24,20 +26,14 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // EmailJS service configuration
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       subject: formData.subject,
-      message: formData.message,
-      to_email: personalInfo.email,
-      to_phone: personalInfo.phone
+      message: formData.message
     };
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init(emailjsConfig.publicKey);
-      
       await emailjs.send(
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
@@ -48,8 +44,7 @@ const Contact = () => {
         title: "Message sent!",
         description: "Your message has been sent successfully.",
       });
-      
-      // Reset the form
+
       setFormData({
         name: '',
         email: '',
@@ -71,14 +66,14 @@ const Contact = () => {
   return (
     <section id="contact" className="section-container bg-gray-50">
       <h2 className="section-title animate-fade-in">Contact</h2>
-      
+
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h3 className="text-2xl font-semibold">Get In Touch</h3>
           <p className="text-muted-foreground text-lg">
             Feel free to reach out if you want to connect with me. I'm always open to discussing new opportunities, projects, or just having a chat.
           </p>
-          
+
           <div className="space-y-4">
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform duration-300">
               <div className="bg-primary bg-opacity-10 p-3 rounded-full">
@@ -91,7 +86,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform duration-300">
               <div className="bg-primary bg-opacity-10 p-3 rounded-full">
                 <Phone size={20} className="text-primary" />
@@ -103,7 +98,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4 hover:translate-x-2 transition-transform duration-300">
               <div className="bg-primary bg-opacity-10 p-3 rounded-full">
                 <MapPin size={20} className="text-primary" />
@@ -117,7 +112,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="card p-6 hover:shadow-xl transition-shadow duration-500 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -149,7 +144,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            
+
             <div className="group">
               <label htmlFor="subject" className="block text-sm font-medium text-muted-foreground mb-1">Subject</label>
               <input 
@@ -163,7 +158,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div className="group">
               <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-1">Message</label>
               <textarea 
@@ -177,7 +172,7 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            
+
             <button 
               type="submit" 
               disabled={isLoading}

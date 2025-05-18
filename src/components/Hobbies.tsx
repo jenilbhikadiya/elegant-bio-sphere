@@ -3,41 +3,42 @@
 const hobbies = [
   {
     id: 1,
-    title: "Photography",
-    icon: "📸",
-    description: "Passionate about capturing moments and exploring visual storytelling through my camera lens. I enjoy landscape and street photography in particular."
+    title: "Hiking",
+    icon: "🥾",
+    description: "I love exploring nature trails and mountains. Hiking helps me refresh my mind and find inspiration in the outdoors."
   },
   {
     id: 2,
-    title: "Hiking",
-    icon: "🏔️",
-    description: "Love exploring nature trails and mountains. I try to go on a hiking trip at least once a month to disconnect and recharge."
+    title: "UI/UX Designing",
+    icon: "🎨",
+    description: "I enjoy creating clean, user-friendly designs and exploring creative ways to improve digital experiences through UI/UX."
   },
   {
     id: 3,
-    title: "Reading",
-    icon: "📚",
-    description: "Avid reader with interests in science fiction, technology trends, and personal development. I aim to read at least one book per month."
+    title: "Coding",
+    icon: "💻",
+    description: "Building apps and solving problems through code is both my passion and profession. I enjoy learning new technologies and frameworks."
   },
   {
     id: 4,
-    title: "Cooking",
-    icon: "🍳",
-    description: "Enjoy experimenting with new recipes and cuisines. I find cooking to be both creative and relaxing after a day of coding."
+    title: "Gaming",
+    icon: "🎮",
+    description: "Gaming is my go-to for fun and relaxation. I enjoy both casual and strategy-based games that challenge my thinking."
   },
   {
     id: 5,
-    title: "Playing Guitar",
-    icon: "🎸",
-    description: "Self-taught guitarist who enjoys playing acoustic covers and composing music during free time. Music provides a creative outlet away from technology."
+    title: "Traveling",
+    icon: "🌍",
+    description: "Exploring new places, cultures, and cuisines excites me. Traveling helps me gain new perspectives and ideas."
   },
   {
     id: 6,
-    title: "Traveling",
-    icon: "✈️",
-    description: "Passionate about exploring new cultures, cuisines, and landscapes. I try to visit at least two new countries every year."
+    title: "Blog Writing",
+    icon: "📝",
+    description: "I like writing tech blogs and sharing my learning journey. It helps me reflect and contribute to the developer community."
   }
 ];
+
 
 const Hobbies = () => {
   return (

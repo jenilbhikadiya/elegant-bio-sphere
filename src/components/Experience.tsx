@@ -13,24 +13,18 @@ const experiences = [
     description: "Describe your responsibilities, achievements, and the technologies you worked with in this role. Include specific projects you contributed to and any measurable results or improvements you delivered.",
     current: true,
   },
-  {
-    id: 2,
-    role: "Software Engineer",
-    company: "Previous Company",
-    location: "City, Country",
-    period: "June 2018 - December 2020",
-    description: "Outline your main responsibilities and achievements in this role. Highlight any significant projects, technologies used, and positive outcomes of your work.",
-    current: false,
-  },
-  {
-    id: 3,
-    role: "Junior Developer",
-    company: "First Company",
-    location: "City, Country",
-    period: "August 2016 - May 2018",
-    description: "Describe your entry-level responsibilities and how you grew in this role. Mention technologies you worked with and any notable contributions or learning experiences.",
-    current: false,
-  },
+    {
+      id: 1,
+      role: "Back End Developer Intern",
+      company: "Soomuch Smart Solution Pvt Ltd",
+      location: "India · Remote",
+      period: "January 2024 - May 2024",
+      description: `Worked as a Back End Developer Intern where I gained hands-on experience with backend technologies. 
+      My responsibilities included building APIs using FastAPI, integrating social media platforms, and managing databases with PostgreSQL. 
+      I also worked with SQLAlchemy to handle ORM and improve data management. The internship enhanced my skills in Python and backend system design.`,
+      current: false
+    }
+  
 ];
 
 const Experience = () => {

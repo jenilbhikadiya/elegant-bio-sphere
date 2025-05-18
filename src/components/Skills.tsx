@@ -4,32 +4,36 @@ const skillCategories = [
     id: 1,
     title: "Technical Skills",
     skills: [
-      { name: "JavaScript", level: 90 },
+      { name: "Flutter", level: 95 },
       { name: "React", level: 85 },
-      { name: "Node.js", level: 80 },
+      { name: "Python", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "Node.js", level: 60 },
       { name: "HTML/CSS", level: 95 },
-      { name: "TypeScript", level: 75 },
-      { name: "SQL", level: 70 },
+      { name: "SQL", level: 75 },
+      { name: "PostgreSQL", level: 80 },
+      { name: "SQLAlchemy", level: 70 },
+      { name: "FastAPI", level: 60 },
     ]
   },
   {
     id: 2,
     title: "Professional Skills",
     skills: [
+      { name: "Communication", level: 85 },
+      { name: "Time Management", level: 75 },
       { name: "Project Management", level: 85 },
       { name: "Team Leadership", level: 80 },
       { name: "Problem Solving", level: 90 },
-      { name: "Communication", level: 85 },
-      { name: "Time Management", level: 75 },
     ]
   },
   {
     id: 3,
     title: "Languages",
     skills: [
-      { name: "English", level: 100 },
-      { name: "Spanish", level: 60 },
-      { name: "French", level: 40 },
+      { name: "English", level: 90 },
+      { name: "Hindi", level: 95 },
+      { name: "Gujarati", level: 100 },
     ]
   }
 ];

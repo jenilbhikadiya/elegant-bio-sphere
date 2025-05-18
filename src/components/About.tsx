@@ -1,4 +1,3 @@
-
 import { User, Mail, Phone, MapPin } from 'lucide-react';
 
 const About = () => {
@@ -8,14 +7,11 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
         <div className="md:col-span-2 space-y-6">
           <p className="text-lg">
-            This is where you can introduce yourself in more detail. Talk about what drives you, your professional journey, and what you're looking to achieve in your career. Personalize this section to really showcase who you are beyond just your work experience.
-          </p>
+          I am a tech lover who enjoys building apps and learning about new technologies. I started my journey in software development because I was curious about how things work behind the scenes. Over time, I learned to make mobile apps, explore blockchain, and even try out artificial intelligence. I enjoy turning ideas into real, working solutions that help people.       </p>
           <p className="text-lg">
-            You might want to mention your approach to work, your professional philosophy, and any particular areas of interest or expertise. This is your chance to make a connection with anyone reading your portfolio.
-          </p>
+          When I work on a project, I focus on solving problems and always try to learn something new. I like working in teams, sharing ideas, and listening to feedback to get better. I believe in writing clean and easy-to-read code, and I always try to make my apps user-friendly and useful.   </p>
           <p className="text-lg">
-            Feel free to include both professional and personal details that paint a fuller picture of who you are, while keeping the tone professional and aligned with your career goals.
-          </p>
+          My goal is to work on interesting projects that make a positive difference. I want to keep growing as a developer and join teams where I can learn, share, and create something meaningful. Outside of coding, I like reading about new tech trends and trying out new tools in my free time.        </p>
         </div>
         
         <div className="card p-6 space-y-4">

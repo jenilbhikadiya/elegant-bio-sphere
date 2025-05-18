@@ -5,27 +5,11 @@ import { School } from 'lucide-react';
 const educationItems = [
   {
     id: 1,
-    degree: "Master of Science in Computer Science",
-    institution: "University Name",
-    location: "City, Country",
-    period: "2014 - 2016",
-    description: "Include details about your course of study, notable achievements, research projects, or thesis work. You can also mention any relevant extracurricular activities or leadership roles."
-  },
-  {
-    id: 2,
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University Name",
-    location: "City, Country",
-    period: "2010 - 2014",
-    description: "Describe your undergraduate studies, key courses, projects, and any honors or distinctions you received. You might also mention relevant activities, clubs, or volunteer work during this time."
-  },
-  {
-    id: 3,
-    degree: "Relevant Certifications",
-    institution: "Various Institutions",
-    location: "",
-    period: "Ongoing",
-    description: "List relevant professional certifications, online courses, or continuing education that demonstrates your commitment to ongoing learning in your field."
+    degree: "Bachelor of Technology in Computer Engineering",
+    institution: "Uka Tarsadia University",
+    location: "Gujarat, India",
+    period: "2023 - 2026 (Ongoing)",
+    description: "Focused on software development, building skills in web and mobile application development, programming, and emerging technologies like blockchain and AI. Participated in academic projects and contributed to tech-focused extracurricular activities."
   }
 ];
 
