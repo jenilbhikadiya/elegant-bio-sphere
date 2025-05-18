@@ -15,14 +15,13 @@ const Hero = () => {
       <div className="container z-10 px-6 mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
           <h1 className="animate-fade-in text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Hi, I'm <span className="text-primary">Your Name</span>
+            Hi, I'm <span className="text-primary">Jenil Bhikadiya</span>
           </h1>
           <p className="animate-fade-in [animation-delay:200ms] text-xl md:text-2xl text-muted-foreground">
-            Professional Title · Location
+            Computer Engineer · Surat, Gujarat, India
           </p>
           <p className="animate-fade-in [animation-delay:400ms] text-lg text-muted-foreground max-w-lg">
-            A brief professional summary highlighting your expertise, experience, and what you're passionate about.
-          </p>
+          Aspiring Software Engineer with a strong foundation in Computer Engineering, currently pursuing a B.Tech at Uka Tarsadia University (2023–2026). Experienced in backend development through a remote internship at Soomuch Smart Solution Pvt Ltd, where I worked with FastAPI, PostgreSQL, and SQLAlchemy. Proficient in Python and passionate about building scalable, user-friendly applications. Actively enhancing skills in Flutter, blockchain, and AI technologies, with a commitment to continuous learning and contributing to innovative tech solutions.          </p>
           <div className="animate-fade-in [animation-delay:600ms] pt-4">
             <a 
               href="#about" 

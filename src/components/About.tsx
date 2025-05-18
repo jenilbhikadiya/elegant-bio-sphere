@@ -19,19 +19,19 @@ const About = () => {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <User size={18} className="text-primary" />
-              <span>Your Full Name</span>
+              <span>Jenil Bhikadiya</span>
             </div>
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-primary" />
-              <a href="mailto:your-email@example.com" className="hover:text-primary transition-colors">your-email@example.com</a>
+              <a href="mailto:jenil.techaakar@gmail.com" className="hover:text-primary transition-colors">jenil.techaakar@gmail.com</a>
             </div>
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-primary" />
-              <a href="tel:+1234567890" className="hover:text-primary transition-colors">+1 (234) 567-890</a>
+              <a href="tel:+918238425832" className="hover:text-primary transition-colors">+91 8238425832</a>
             </div>
             <div className="flex items-center gap-3">
               <MapPin size={18} className="text-primary" />
-              <span>City, Country</span>
+              <span>Surat, Gujarat, India</span>
             </div>
           </div>
           
